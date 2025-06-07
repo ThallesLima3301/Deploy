@@ -13,11 +13,12 @@ function App() {
     };
 
     try {
-      const res = await fetch('http://localhost:3001/api/feedback', {
+      const res = await fetch('https://deploy-backend-yf5q.onrender.com/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
+
 
       if (res.ok) {
         alert('Mensagem enviada com sucesso!');
